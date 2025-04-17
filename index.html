@@ -68,6 +68,8 @@
   </div>
 
   <button onclick="generateOTP()">Generate OTP</button>
+  <br>
+<button onclick="generatecolors()">Click here to change color </button>
 
   <script>
      function generateOTP() {
@@ -81,6 +83,17 @@
       });
 
       document.getElementById("numhold").textContent = `OTP: ${otp}`;
+    }
+    function generatecolors(){
+        let hexa="#";
+        const hexacolors="abcdef0123456789"
+        for(i=0;i<6;i++){
+        const colors=Math.floor(Math.random()*hexacolors.length)
+        hexa+=hexacolors[colors]
+    }
+    <!-- console.log(hexa) -->
+document.body.style.backgroundColor = hexa;
+
     }
 
 
